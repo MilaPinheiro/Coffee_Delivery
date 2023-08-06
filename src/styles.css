@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Baloo 2';
+}
+
+.headerContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 160px;
+    margin-top: 30px;
+}
+
+.imgLogo{
+    width: 84.952px;
+    height: 40px;
+    
+}
+
+.location {
+    display: flex;
+    gap: 20px;
+}
+
+.location p {
+    padding: 8px;
+    border-radius: 6px;
+    background: var(--brand-purple-light, #EBE5F9);
+    display: flex;
+    align-items: center;
+    color: var(--brand-purple-dark, #4B2995);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.imgLocation{
+    padding: 8px;
+    border-radius: 6px;
+    background: var(--brand-yellow-light, #F1E9C9);
+}
+
+
+.container-section{
+    width: 100%;
+    margin: auto;
+    margin-top: 94px;
+}
+
+.container-section-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-section-one-container-divs {
+    display: flex;
+    width: 70%;
+}
+
+.container-section-one-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 76px;
+    
+}
+
+.container-section-one-title{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  62.4px;
+    color: var(--base-title);
+    font-family: var(--title);
+
+}
+
+.container-section-one-p{
+    font-family: var(--regular);
+    color: var(--base-subtitle, #403937);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 16px;
+}
+
+
+.icons {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  20.8px;
+    margin-top: 66px;
+}
+
+.container-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container-icons-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.container-icons-primary-box2{
+    width: 100%;
+    display: flex;
+}
+
+.container-icons .box {
+  margin-right: 20px;
+}
+
+.container-icons-primary p {
+    font-family: var(--regular);
+    color: var(--base-text, #574F4D);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  20.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container-icons-img{
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--brand-yellow-dark, #C47F17);
+    margin-right: 12px;
+}
+
+.light{
+    background: var(--brand-yellow, #DBAC2C);
+}
+
+.gray {
+    background: var(--base-text, #574F4D);
+}
+
+.purple {
+    background: var(--brand-purple, #8047F8);
+}
+
+.container-coffe{
+    width: 40%;
+}
+
+.container-coffe img {
+    width: 100%;
+}
+
+.section-two {
+    margin-top: 100px;
+}
+
+.container-section-coffee{
+    width: 70%;
+    margin: auto;
+}
+
+.container-section-coffee-title{
+    font-family: var(--title);
+    color: var(--base-subtitle, #403937);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  41.6px;
+}
+
+.container-section-coffee-cards{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+
+}
+
+.container-section-coffee-card {
+    width: 256px;
+    height: 310px;
+    border-radius: 6px 36px;
+    padding: 15px;
+    background: var(--base-card, #F3F2F2);
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-section-coffee-card-img {
+    position: relative;
+    margin-top: -50px;
+    margin-left: 50px;
+    width: 120px;
+    height: 120px;
+
+}
+
+.container-section-coffee-card-box{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-section-coffee-card-box h3 {
+    color: var(--brand-yellow-dark, #C47F17);
+    font-family: var(--regular);
+    border-radius: 100px;
+    background: var(--brand-yellow-light, #F1E9C9);
+    padding: 4px 8px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 13px;
+    margin-top: 12px;
+}
+
+.container-section-coffee-card-box p {
+    color: var(--base-subtitle, #403937);
+    font-family:var(--title);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height:  26px;
+    margin-top: 16px;
+}
+
+.container-section-coffee-card-box span{
+    color: var(--base-label, #8D8686);
+    font-family: var(--regular);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.2px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.container-section-coffee-card-box2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 33px;
+}
+
+.container-section-coffee-card-box2-p1{
+    color: var(--base-text, #574F4D);
+    font-family: var(--title);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+}
+
+.container-section-coffee-card-box2-p2{
+    font-family: var(--regular);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  20.8px;
+    border-radius: 6px;
+    padding: 8px 8px;
+    background: var(--base-button, #E6E5E5);
+    display: flex;
+    gap: 4px;
+}
+
+.money {
+    font-family: var(--regular);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.8px ;
+}
+
+
+.container-section-coffee-card-box2-p2 img {
+    margin-right: 4px;
+}
