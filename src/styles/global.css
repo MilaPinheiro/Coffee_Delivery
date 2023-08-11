@@ -1,3 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Baloo 2';
+}
+
+
+
 :root {
     --base-white: #FFFFFF,
     --base-background: #FAFAFA,
@@ -21,4 +31,19 @@
   :root {
     --regular: 'Roboto',
     --title: 'Baloo 2',
+  }
+
+
+  
+  .sectionCoffeeCards{
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 32px;
+    
   }

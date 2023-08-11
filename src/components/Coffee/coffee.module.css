@@ -1,32 +1,24 @@
 
-  .container-section-coffee-cards{
-    width: 70%;
-    margin: auto;
-    margin-bottom: 100px;
-    display: flex;
-    
-  }
-  
-  .container-section-coffee-card {
+  .containerSectionCoffeeCard{
     width: 256px;
     height: 310px;
     border-radius: 6px 36px;
     padding: 15px;
     background: var(--base-card, #F3F2F2);
     margin-top: 54px;
- 
+
   }
-  
-  .container-section-coffee-card-img {
+
+  .sectionCoffeeCardImg{
     position: relative;
     margin-top: -50px;
     margin-left: 60px;
     width: 120px;
     height: 120px;
-  
+    
   }
   
-  .container-section-coffee-card-box{
+  .containerSectionCoffeeCardBox{
     width: 95%;
     margin: auto;
     display: flex;
@@ -36,20 +28,25 @@
    
   }
   
-  .container-section-coffee-card-box h3 {
+  .tagsContainer {
+    display: flex;
+    gap: 2px;
+  }
+
+  .containerSectionCoffeeCardBox h3 {
     color: var(--brand-yellow-dark, #C47F17);
     font-family: var(--regular);
     border-radius: 100px;
     background: var(--brand-yellow-light, #F1E9C9);
     padding: 4px 8px;
-    font-size: 10px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 700;
     line-height: 13px;
     margin-top: 12px;
   }
   
-  .container-section-coffee-card-box p {
+  .containerSectionCoffeeCardBox p {
     color: var(--base-subtitle, #403937);
     font-family:var(--title);
     font-size: 20px;
@@ -59,7 +56,7 @@
     margin-top: 16px;
   }
   
-  .container-section-coffee-card-box span{
+  .containerSectionCoffeeCardBox span{
     color: var(--base-label, #8D8686);
     font-family: var(--regular);
     font-size: 14px;
@@ -70,14 +67,14 @@
     text-align: center;
   }
   
-  .container-section-coffee-card-box2 {
+  .coffeeCardBox2 {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 33px;
   }
   
-  .container-section-coffee-card-box2-p1{
+  .coffeeCardBox2P1{
     color: var(--base-text, #574F4D);
     font-family: var(--title);
     font-size: 24px;
@@ -86,7 +83,7 @@
     line-height: 130%;
   }
   
-  .container-section-coffee-card-box2-p2{
+  .coffeeCardBox2P2{
     font-family: var(--regular);
     font-size: 16px;
     font-style: normal;
@@ -108,7 +105,7 @@
   }
   
   
-  .container-section-coffee-card-box2-p2 img {
+  .coffeeCardBox2P2 img {
     margin-right: 4px;
   }
 
