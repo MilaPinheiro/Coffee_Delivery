@@ -1,0 +1,280 @@
+.containerOrder {
+    display: flex;
+    width: 62%;
+    margin: auto;
+}
+
+.sectionTwo {
+ margin-right: 32px;
+}
+
+.containerSectionCoffee{
+    width: 100%;
+    margin: auto;
+
+}
+  
+  .containerSectionCoffeeTitle{
+    font-family: var(--title);
+    color: var(--base-subtitle, #403937);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height:  41.6px;
+    margin-bottom: 15px;
+    margin-top: 72px;
+  }
+  
+  .containerDelivery {
+    margin: auto;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    align-self: stretch;
+
+    border-radius: 6px;
+    background: var(--base-card, #F3F2F2);
+    margin-bottom: 12px;
+  }
+
+  .mapBox{  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .mapBoxTitle{
+    display: flex;
+    align-items: center;
+
+    color: var(--base-subtitle, #403937);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height:  20.8px;
+  }
+
+  .mapBoxSpan {
+    color: var(--base-text, #574F4D);
+
+    font-family: var(--regular);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  18.2px;
+    margin-left: 35px;
+  }
+
+  .color{
+    color: #C47F17;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+
+  .containerInputs {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .inputBox{
+    padding: 12px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--base-button, #E6E5E5);
+    background: var(--base-input, #EDEDED);
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--base-label, #8D8686);
+    font-weight: 400;
+
+    outline: none;
+  }
+
+  .inputBox1{
+    width: 40%;
+    padding: 12px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--base-button, #E6E5E5);
+    background: var(--base-input, #EDEDED);
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--base-label, #8D8686);
+    font-weight: 400;
+
+    outline: none;
+  }
+
+.containerAddress {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.containerCity {
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2{
+  display: flex;
+}
+
+.city {
+  width: 80%;
+  margin-right: 12px;
+}
+
+.inputUf{
+  width: 20%;
+}
+
+.colorTwo{
+    width: 22px;
+    height: 22px;
+    color:#8047F8;
+}
+
+.credCard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    color: var(--base-text, #574F4D);
+    border-radius: 6px;
+    background: var(--base-button, #E6E5E5);
+    padding: 16px;
+    font-size: 12px;
+    width: 100%;
+  
+}
+
+
+.cardsCenter {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+}
+
+.containerSelect{
+  border-radius: 6px 44px;
+  background: var(--base-card, #F3F2F2);
+  padding: 40px;
+  width: 448px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.containerSelectBox {
+    padding: 8px 4px;
+    display: flex;
+    background: var(--base-card, #F3F2F2);
+    margin-bottom: 24px;
+}
+
+.containerSelectBox img {
+    margin-right: 20px;
+}
+
+.cardSelect {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.cardExpress{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.cardExpress h3 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  20.8px;
+    color: var(--base-subtitle, #403937);
+}
+
+.cardExpress p {
+    color: var(--base-text, #574F4D);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height:  20.8px;
+    
+}
+
+.cardRemove {
+    display: flex;
+    align-items: center;
+   
+}
+
+.coffeeCardBox2P2{
+    display: flex;
+
+}
+
+.cardRemove p {
+    height: 32px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-right: 10px;
+    background: var(--base-button, #E6E5E5);
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.cardRemove span {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:  19.2px;
+    text-transform: uppercase;
+    color: var(--base-text, #574F4D);
+    background: var(--base-button, #E6E5E5);
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.trash {
+    width: 16px;
+    height: 16px;
+    color: #8047F8;
+    margin-right: 5px;
+  
+}

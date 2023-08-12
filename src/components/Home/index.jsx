@@ -9,6 +9,9 @@ import IconTwo from "../../assets/Icon2.svg";
 import IconThree from "../../assets/Icon3.svg";
 
 export const HomePage = () => {
+
+
+
   return (
     <>
       <section>
@@ -87,7 +90,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <div className="sectionCoffeeCards">
+      <div className="sectionCoffeeCards" >
         {listCoffee.map((coffee) => (
           <Coffee
             key={coffee.id}
@@ -96,6 +99,7 @@ export const HomePage = () => {
             tags={coffee.tags}
             image={coffee.image}
             price={coffee.price}
+            onSelectCoffee={selectCoffee}
           />
         ))}
       </div>

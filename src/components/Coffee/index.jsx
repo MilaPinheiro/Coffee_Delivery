@@ -4,13 +4,12 @@ import IconPurple1 from "../../assets/iconpurple1.svg";
 import IconPurple2 from "../../assets/iconpurple2.svg";
 
 
-export function Coffee({id, name, description, tags, image, price }) {
+export function Coffee({id, name, description, tags, image, price, onSelectCoffee }) {
     
    
     return ( 
 
-  
-          <div className={styles.containerSectionCoffeeCard}>
+          <div className={styles.containerSectionCoffeeCard} onClick={onSelectCoffee}>
             <div className={styles.sectionCoffeeCardImg}>
               <img src={image} />
             </div>
