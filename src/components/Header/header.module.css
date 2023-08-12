@@ -1,3 +1,12 @@
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+}
+
 .headerContainer {
     width: 80%;
     margin: auto;
@@ -5,18 +14,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 32px 160px;
-    margin-top: 30px;
+    margin-top: 0px;
+    background-color: white;
+
+   
 }
 
 .imgLogo{
     width: 84.952px;
     height: 40px;
-    
 }
 
 .location {
     display: flex;
     gap: 20px;
+
 }
 
 .location p {

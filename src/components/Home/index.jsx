@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 import { listCoffee } from "../../data/listCoffe";
 import { Coffee } from "../../components/Coffee";
+
 
 import styles from "./home.module.css";
 import Delivery from "../../assets/Delivery.svg";
@@ -8,8 +10,7 @@ import IconOne from "../../assets/Icon1.svg";
 import IconTwo from "../../assets/Icon2.svg";
 import IconThree from "../../assets/Icon3.svg";
 
-export const HomePage = () => {
-
+export const HomePage = ({selectCoffee, selectedCoffees }) => {
 
 
   return (
@@ -99,9 +100,12 @@ export const HomePage = () => {
             tags={coffee.tags}
             image={coffee.image}
             price={coffee.price}
-            onSelectCoffee={selectCoffee}
+            onSelectCoffee={() => selectCoffee(coffee.id)} 
+          
           />
         ))}
+  
+
       </div>
     </>
   );

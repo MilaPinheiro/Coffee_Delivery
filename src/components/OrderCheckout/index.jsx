@@ -1,22 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { CardsSelect } from "../CardsSelect";
 import styles from "./orderCheckout.module.css"
-import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money, Trash } from "@phosphor-icons/react";
-import IconPurple1 from "../../assets/iconpurple1.svg";
-import IconPurple2 from "../../assets/iconpurple2.svg";
+import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "@phosphor-icons/react";
 
-export function OrderCheckout() { 
+export function OrderCheckout({selectCoffee, selectedCoffees }) { 
 
-    const [selectedCoffees, setSelectedCoffees] = useState([]);
-
-    const selectCoffee = (coffeeId) => {
-        if (selectedCoffees.includes(coffeeId)) {
-          setSelectedCoffees(selectedCoffees.filter(id => id !== coffeeId));
-        } else {
-          setSelectedCoffees([...selectedCoffees, coffeeId]);
-        }
-
-        console.log(coffeeId);
-      };
 
 
     return (
@@ -77,36 +65,7 @@ export function OrderCheckout() {
                 </div>
             </section>
         </section>
-
-        <section className={styles.sectionTwo}>
-            <div className={styles.containerSectionCoffee}>
-                <h2 className={styles.containerSectionCoffeeTitle}>
-                   Cafés selecionados
-                </h2>
-            </div>
-            <div className={styles.containerSelect}>
-                {selectedCoffees.map(coffeeId => {
-                    const coffee = listCoffee.find(item => item.id === coffeeId);
-                
-                return (
-                <div key={coffee.id} className={styles.containerSelectBox} >
-                    <img src={coffee.image} />
-                    <div className={styles.cardSelect}>
-                        <div className={styles.cardExpress}>
-                            <h3>{coffee.name}l</h3>
-                            <p>{coffee.price}</p>
-                        </div>
-                        <div className={styles.cardRemove}>
-                            <p className={styles.coffeeCardBox2P2}><img src={IconPurple1} />1 <img src={IconPurple2}/></p>
-                            <span ><Trash size={32} className={styles.trash} />REMOVER</span>
-                        </div>
-                    </div>
-                </div>
-                );
-            })}
-            </div>
-        </section>
-
+        <CardsSelect selectedCoffees={selectedCoffees} /> 
     </section>
 
     )

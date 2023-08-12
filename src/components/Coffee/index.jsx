@@ -32,10 +32,7 @@ export function Coffee({id, name, description, tags, image, price, onSelectCoffe
               <img src={IconButton} />
             </div>
           </div>
-
-
+          
     )
-
-
 }
 
