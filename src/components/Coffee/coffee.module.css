@@ -73,6 +73,10 @@
     justify-content: space-around;
     margin-top: 33px;
   }
+
+  .coffeeCardBox2 button {
+    border: none;
+  }
   
   .coffeeCardBox2P1{
     color: var(--base-text, #574F4D);

@@ -28,6 +28,7 @@ function App() {
         <Route path="/"  element={<HomePage selectCoffee={selectCoffee} selectedCoffees={selectedCoffees}/>} />
         <Route path="/checkout" element={<OrderCheckout selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} />} />
       </Routes>
+   
     </BrowserRouter>
   );
 }

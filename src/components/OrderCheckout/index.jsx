@@ -3,9 +3,13 @@ import { CardsSelect } from "../CardsSelect";
 import styles from "./orderCheckout.module.css"
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "@phosphor-icons/react";
 
-export function OrderCheckout({selectCoffee, selectedCoffees }) { 
+export function OrderCheckout({selectCoffee, selectedCoffees}) { 
 
+    console.log(selectCoffee)
 
+    const removeCoffee = (coffeeId) => {
+        selectCoffee(coffeeId)
+    }
 
     return (
     <section className={styles.containerOrder}>
@@ -65,7 +69,8 @@ export function OrderCheckout({selectCoffee, selectedCoffees }) {
                 </div>
             </section>
         </section>
-        <CardsSelect selectedCoffees={selectedCoffees} /> 
+        <CardsSelect selectedCoffees={selectedCoffees} removeCoffee={removeCoffee}/>
+
     </section>
 
     )
