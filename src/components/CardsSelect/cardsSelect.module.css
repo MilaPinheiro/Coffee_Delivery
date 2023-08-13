@@ -29,6 +29,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+   
   }
   
   .containerSelectBox {
@@ -36,10 +37,12 @@
       display: flex;
       background: var(--base-card, #F3F2F2);
       margin-bottom: 24px;
+      border-bottom: 1px solid #E6E5E5;
   }
   
   .containerSelectBox img {
       margin-right: 20px;
+    
   }
   
   .cardSelect {
@@ -54,8 +57,9 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
+      
   }
-  
+ 
   .cardExpress h3 {
       font-family: Roboto;
       font-size: 16px;
@@ -78,22 +82,26 @@
   .cardRemove {
       display: flex;
       align-items: center;
-     
+    
   }
   
   .coffeeCardBox2P2{
       display: flex;
-  
   }
   
+  .coffeeCardBox2P2 img {
+    margin: 4px;
+   
+  }
+
   .cardRemove p {
       height: 32px;
-      padding: 8px;
       justify-content: center;
       align-items: center;
       gap: 4px;
       margin-right: 10px;
       background: var(--base-button, #E6E5E5);
+      color: var(--base-title, #272221);
       border-radius: 6px;
       padding: 8px;
   }
@@ -109,12 +117,69 @@
       background: var(--base-button, #E6E5E5);
       border-radius: 6px;
       padding: 8px;
+      display: flex;
   }
   
   .trash {
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       color: #8047F8;
       margin-right: 5px;
+      
+  }
+
+  .box3 {
+    margin-left: 4px;
     
   }
+
+.selectOrder {
+     display: flex;
+     flex-direction: column;
+}
+
+.selectIntens {
+    display: flex;
+    justify-content: space-between;
+    color: var(--base-text, #574F4D);
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.2px;
+    margin-bottom: 15px;
+    font-family: var(--regular);
+}
+
+.selectIntensTwo {
+    display: flex;
+    justify-content: space-between;
+    color: var(--base-subtitle, #403937);
+    text-align: right;
+    font-family: var(--title);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+.buttonOrder{
+   
+    display: flex;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height:  22.4px;
+    border-radius: 6px;
+    background: var(--brand-yellow, #DBAC2C);
+    color: white;
+    border: none;
+    width: 100%;
+}
+

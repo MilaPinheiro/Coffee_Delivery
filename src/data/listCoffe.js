@@ -38,7 +38,7 @@ export const listCoffee =[
         description: 'Meio a meio de expresso tradicional com leite vaporizado',
         tags: ['tradicional', 'com leite'],
         image: 'coffees/coffee_cafe_com_leite.svg',
-        price: 7.5,
+        price: 7.50,
       },
       {
         id: '5',
@@ -47,7 +47,7 @@ export const listCoffee =[
           'Uma dose de café expresso com o dobro de leite e espuma cremosa',
         tags: ['tradicional', 'com leite'],
         image: 'coffees/coffee_latte.svg',
-        price: 10.2,
+        price: 10.20,
       },
       {
         id: '6',
@@ -56,7 +56,7 @@ export const listCoffee =[
           'Bebida com canela feita de doses iguais de café, leite e espuma',
         tags: ['tradicional', 'com leite'],
         image: 'coffees/coffee_capuccino.svg',
-        price: 12,
+        price: 12.00,
       },
       {
         id: '7',
@@ -65,7 +65,7 @@ export const listCoffee =[
           'Café expresso misturado com um pouco de leite quente e espuma',
         tags: ['tradicional', 'com leite'],
         image: 'coffees/coffee_macchiato.svg',
-        price: 9.5,
+        price: 9.50,
       },
       {
         id: '8',
@@ -73,7 +73,7 @@ export const listCoffee =[
         description: 'Café expresso com calda de chocolate, pouco leite e espuma',
         tags: ['tradicional'],
         image: 'coffees/coffee_mocaccino.svg',
-        price: 12,
+        price: 12.00,
       },
       {
         id: '9',
@@ -81,7 +81,7 @@ export const listCoffee =[
         description: 'Bebida feita com chocolate dissolvido no leite quente e café',
         tags: ['tradicional', 'com leite'],
         image: 'coffees/coffee_chocolate_quente.svg',
-        price: 13.5,
+        price: 13.50,
       },
       {
         id: '10',
@@ -90,7 +90,7 @@ export const listCoffee =[
           'Drink gelado de café expresso com rum, creme de leite e hortelã',
         tags: ['especial', 'alcoólico', 'gelado'],
         image: 'coffees/coffee_cubano.svg',
-        price: 14,
+        price: 14.00,
       },
       {
         id: '11',
@@ -98,7 +98,7 @@ export const listCoffee =[
         description: 'Bebida adocicada preparada com café e leite de coco',
         tags: ['especial'],
         image: 'coffees/coffee_havaiano.svg',
-        price: 13.9,
+        price: 13.90,
       },
       {
         id: '12',
@@ -106,7 +106,7 @@ export const listCoffee =[
         description: 'Bebida preparada com grãos de café árabe e especiarias',
         tags: ['especial'],
         image: 'coffees/coffee_arabe.svg',
-        price: 14.9,
+        price: 14.90,
       },
       {
         id: '13',
@@ -114,6 +114,6 @@ export const listCoffee =[
         description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
         tags: ['especial', 'alcoólico'],
         image: 'coffees/coffee_irlandes.svg',
-        price: 14.9,
+        price: 14.90,
       },
 ]

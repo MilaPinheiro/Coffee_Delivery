@@ -26,20 +26,42 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee}) {
         return (
         <div key={coffee.id} className={styles.containerSelectBox} >
             <img src={coffee.image} />
-            <div className={styles.cardSelect}>
-                <div className={styles.cardExpress}>
+            <div className={styles.cardSelect} >
+                <div className={styles.cardExpress} >
                     <h3>{coffee.name}</h3>
-                    <p>{coffee.price}</p>
+                    <p>R$ {coffee.price}</p>
                 </div>
                 <div className={styles.cardRemove} >
-                    <p className={styles.coffeeCardBox2P2}><img src={IconPurple1} />1 <img src={IconPurple2}/></p>
+                    <p className={styles.coffeeCardBox2P2}><img src={IconPurple1} />1 <img className={styles.box3} src={IconPurple2}/></p>
                     <span ><Trash size={32} className={styles.trash} onClick={() => removeCoffee(coffee.id)}/>REMOVER</span>
                 </div>
             </div>
         </div>
         );
     })}
+
+    <div className={styles.selectOrder}>
+        <div className={styles.selectIntens}>
+            <p>Total de intens</p>
+            <span>R$29,70</span>
+        </div>
+        <div className={styles.selectIntens}>
+            <p>Entrega</p>
+            <span>R$3,50</span>
+        </div>
+        <div className={styles.selectIntensTwo}>
+            <p>Total</p>
+            <span>R$33,20</span>
+        </div>
+        <button className={styles.buttonOrder}>CONFIRMAR PEDIDO</button>
+        
     </div>
+
+    
+    </div>
+
+   
+  
     </section>
 </>
     )
