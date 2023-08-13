@@ -119,6 +119,10 @@
       padding: 8px;
       display: flex;
   }
+
+  .cardRemove span:hover {
+    background: var(--base-hover, #D7D5D5);
+  }
   
   .trash {
       width: 20px;
@@ -183,3 +187,6 @@
     width: 100%;
 }
 
+.buttonOrder:hover{
+    background: var(--brand-yellow-dark, #C47F17);
+}

@@ -29,7 +29,7 @@ export function Coffee({id, name, description, tags, image, price, onSelectCoffe
             <div className={styles.coffeeCardBox2}>
               <p className={styles.coffeeCardBox2P1}><span className={styles.money}>R$</span>{price}</p>
               <p className={styles.coffeeCardBox2P2}><img src={IconPurple1} />1 <img src={IconPurple2}/></p>
-              <button onClick={onSelectCoffee}>
+              <button onClick={onSelectCoffee} >
                 <img src={IconButton} />
               </button>
             </div>
