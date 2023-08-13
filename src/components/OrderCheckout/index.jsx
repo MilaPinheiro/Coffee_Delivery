@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState } from 'react'; 
 import { CardsSelect } from "../CardsSelect";
+import { SuccessOrder } from "../SuccessOrder"
+
 import styles from "./orderCheckout.module.css"
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "@phosphor-icons/react";
 
-export function OrderCheckout({selectCoffee, selectedCoffees}) { 
 
-    console.log(selectCoffee)
+export function OrderCheckout({selectCoffee, selectedCoffees, onConfirmOrder}) { 
+
+    const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
 
     const removeCoffee = (coffeeId) => {
         selectCoffee(coffeeId)
     }
 
+
+    const handleConfirmOrder = (addressData) => {
+        if (selectedCoffees.length > 0) {
+            setIsOrderConfirmed(true);
+        } 
+    };
+
+
     return (
-    <section className={styles.containerOrder}>
+
+    <>
+    {isOrderConfirmed ? 
+         <SuccessOrder onConfirmOrder={onConfirmOrder} /> : (
+        <section className={styles.containerOrder}>
         <section className={styles.sectionTwo}>
             <div className={styles.containerSectionCoffee}>
                 <h2 className={styles.containerSectionCoffeeTitle}>
@@ -69,11 +84,12 @@ export function OrderCheckout({selectCoffee, selectedCoffees}) {
                 </div>
             </section>
         </section>
-        <CardsSelect selectedCoffees={selectedCoffees} removeCoffee={removeCoffee}/>
+        <CardsSelect selectedCoffees={selectedCoffees} removeCoffee={removeCoffee} onConfirmOrder={handleConfirmOrder}/>
 
     </section>
-
-    )
+    )}
+ </>
+)
 }
 
 

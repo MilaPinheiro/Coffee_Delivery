@@ -4,7 +4,6 @@ import { Header } from './components/Header'
 import { HomePage } from "./components/Home";
 import { OrderCheckout } from "./components/OrderCheckout";
 
-
 function App() {
   
 
@@ -21,6 +20,7 @@ function App() {
     console.log(coffeeId)
   };
 
+
   return (
     <BrowserRouter>
       <Header />
@@ -28,7 +28,6 @@ function App() {
         <Route path="/"  element={<HomePage selectCoffee={selectCoffee} selectedCoffees={selectedCoffees}/>} />
         <Route path="/checkout" element={<OrderCheckout selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} />} />
       </Routes>
-   
     </BrowserRouter>
   );
 }

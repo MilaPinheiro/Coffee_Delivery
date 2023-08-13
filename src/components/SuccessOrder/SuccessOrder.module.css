@@ -1,0 +1,111 @@
+.containerSuccess {
+    width: 100%;
+    margin-top: 200px;
+}
+
+.boxSuccess {
+    width: 62%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxConfirm{
+    width: 100%; 
+    display: flex; 
+    margin-top: 40px;
+}
+
+.orderConfirm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxOne {
+    width: 100%;
+}
+
+.orderConfirmTitle {
+    color: var(--brand-yellow-dark, #C47F17);
+    font-family: var(--title);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 41.6px;
+    
+}
+
+.OrdeConfirmP {
+    color: var(--base-subtitle, #403937);
+    font-family: var(--regular);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.containerDeliverySuccess {
+    width: 100%;
+    padding: 40px;
+    border-radius: 6px 36px;
+    background: #FAFAFA;
+    border: 1px solid var(--brand-purple, #36225f15);
+}
+
+
+.SuccessIcons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    color: #FAFAFA;
+}
+
+.SuccessIconsPurple {
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--brand-purple, #8047F8);
+}
+
+.successIconsOrange {
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--brand-yellow, #DBAC2C);
+}
+
+.successIconsYellow {
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--brand-yellow-dark, #C47F17);
+}
+
+.BoxSuccessCards {
+    width: 100%;
+    margin-left: 12px;
+    color: var(--base-text, #574F4D);
+    font-family: var(--regular);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+
+.SuccessSpan  {
+    color: var(--base-text, #0e0d0de5);
+    font-family: var(--regular);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
+}
+
+
+.successImage {
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 100px;
+
+}
+

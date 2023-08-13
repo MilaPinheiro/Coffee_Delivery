@@ -1,14 +1,33 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import styles from "./cardsSelect.module.css";
+import { SuccessOrder } from '../SuccessOrder';
 import { listCoffee } from "../../data/listCoffe";
 import IconPurple1 from "../../assets/iconpurple1.svg";
 import IconPurple2 from "../../assets/iconpurple2.svg";
 import { Trash } from "@phosphor-icons/react";
 
-export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee}) {
+export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee, onConfirmOrder}) {
 
     console.log(selectedCoffees)
 
+    
+    let amountSelectedPrice = 0;
+   
+
+    selectedCoffees.forEach(coffeeId => {
+        const selectedCoffee = listCoffee.find(coffee => coffee.id === coffeeId);
+        if (selectedCoffee) {
+            amountSelectedPrice += selectedCoffee.price;
+        }
+
+        console.log(`"ID" +${coffeeId}`)
+    });
+
+    console.log(amountSelectedPrice)
+
+
+    const priceDelivery = amountSelectedPrice > 0 ? amountSelectedPrice + 3.50 : 0.00;
+  
 
     return (
 
@@ -43,7 +62,7 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee}) {
     <div className={styles.selectOrder}>
         <div className={styles.selectIntens}>
             <p>Total de intens</p>
-            <span>R$29,70</span>
+            <span>{`R$ ${amountSelectedPrice.toFixed(2)}`}</span>
         </div>
         <div className={styles.selectIntens}>
             <p>Entrega</p>
@@ -51,9 +70,9 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee}) {
         </div>
         <div className={styles.selectIntensTwo}>
             <p>Total</p>
-            <span>R$33,20</span>
+            <span>{`R$ ${priceDelivery.toFixed(2)}`}</span>
         </div>
-        <button className={styles.buttonOrder}>CONFIRMAR PEDIDO</button>
+        <button className={styles.buttonOrder} onClick={onConfirmOrder}>CONFIRMAR PEDIDO</button>
         
     </div>
 

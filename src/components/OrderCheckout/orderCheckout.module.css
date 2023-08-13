@@ -171,9 +171,14 @@
     padding: 16px;
     font-size: 12px;
     width: 100%;
-  
+    cursor: pointer;
 }
 
+.cards:hover{
+  border-radius: 6px;
+  border: 2px solid var(--brand-purple, #8047F8);
+  background: var(--brand-purple-light, #EBE5F9);
+}
 
 .cardsCenter {
     display: flex;
