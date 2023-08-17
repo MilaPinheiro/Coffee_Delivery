@@ -18,12 +18,12 @@ export function Header() {
             <div className={styles.location}>
               <p>
                 <img src={Location} />
-                Vinhedo,SP
+                Vinhedo, SP
               </p>
               <Link to="/checkout">
                 <img className={styles.imgLocation} src={IconHeader} />
               </Link>
-            </div>
+              </div>
           </div>
       </header>
       </>

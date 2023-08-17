@@ -10,7 +10,7 @@ import IconOne from "../../assets/Icon1.svg";
 import IconTwo from "../../assets/Icon2.svg";
 import IconThree from "../../assets/Icon3.svg";
 
-export const HomePage = ({selectCoffee, selectedCoffees }) => {
+export const HomePage = ({selectCoffee, selectedCoffees, incrementCoffe, decrementCoffe }) => {
 
 
   return (
@@ -47,20 +47,19 @@ export const HomePage = ({selectCoffee, selectedCoffees }) => {
                               className={`${styles.containerIconsImg} ${styles.light}`}
                               src={IconOne}
                             />
-                            Entrega rápida e rastreada
+                           Embalagem mantém o café intacto
                           </p>
                         </div>
                       </div>
-                    </div>
-
-                    <div className={styles.containerIconsPrimary}>
+                      <div className={styles.containerIconsPrimary}>
                       <div className={styles.containerIconsPrimaryBox2}>
                         <p>
                           <img
                             className={`${styles.containerIconsImg} ${styles.gray}`}
                             src={IconTwo}
                           />
-                          Embalagem mantém o café intacto
+                           Entrega rápida e rastreada
+                          
                         </p>
                       </div>
                       <div className={styles.containerIconsPrimaryBox2}>
@@ -73,6 +72,9 @@ export const HomePage = ({selectCoffee, selectedCoffees }) => {
                         </p>
                       </div>
                     </div>
+                    </div>
+
+                  
                   </div>
                 </div>
               </div>
@@ -100,6 +102,7 @@ export const HomePage = ({selectCoffee, selectedCoffees }) => {
             tags={coffee.tags}
             image={coffee.image}
             price={coffee.price}
+            selectedCoffees={selectedCoffees}
             onSelectCoffee={() => selectCoffee(coffee.id)} 
           
           />

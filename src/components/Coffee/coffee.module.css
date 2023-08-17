@@ -3,10 +3,10 @@
     width: 256px;
     height: 310px;
     border-radius: 6px 36px;
-    padding: 15px;
+    padding: 12px;
     background: var(--base-card, #F3F2F2);
     margin-top: 54px;
-
+   
   }
 
   .sectionCoffeeCardImg{
@@ -25,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
+  
   }
   
   .tagsContainer {
@@ -54,6 +54,7 @@
     font-weight: 700;
     line-height:  26px;
     margin-top: 16px;
+   
   }
   
   .containerSectionCoffeeCardBox span{
@@ -85,6 +86,7 @@
     font-style: normal;
     font-weight: 800;
     line-height: 130%;
+
   }
   
   .coffeeCardBox2P2{
@@ -94,10 +96,11 @@
     font-weight: 400;
     line-height:  20.8px;
     border-radius: 6px;
-    padding: 8px 8px;
+    padding: 8px;
     background: var(--base-button, #E6E5E5);
     display: flex;
     gap: 4px;
+    
   }
   
   .money {
@@ -106,11 +109,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: 20.8px ;
+
   }
   
   
   .coffeeCardBox2P2 img {
     margin-right: 4px;
+    
   }
 
-  
+  .coffeCardButton img {
+    margin-top: 5px;
+  }

@@ -1,10 +1,10 @@
 .containerSuccess {
     width: 100%;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .boxSuccess {
-    width: 62%;
+    width: 80%;
     margin: auto;
     display: flex;
     align-items: center;

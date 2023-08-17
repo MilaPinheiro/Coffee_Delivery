@@ -14,25 +14,26 @@
 
 .containerDivs {
     display: flex;
-    width: 70%;
+    width: 80%;
 }
 
 .sectionOneContainer{
-    width: 45%;
+    width: 60%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     margin-right: 76px;
-    
 }
 
 .sectionOnetitle{
-    font-size: 48px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 800;
     line-height:  62.4px;
     color: var(--base-title);
     font-family: var(--title);
-
+    padding-right: 100px;
 }
 
 .sectionOneContainer p{
@@ -43,11 +44,12 @@
     font-weight: 400;
     line-height: 26px;
     margin-top: 16px;
-
+    width: 100%;
 }
 
 
 .icons {
+    width: 100%;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -58,26 +60,27 @@
 .containerIcons{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 }
 
+.sectionCoffeeCards {
+    width: 100%;
+}
 
 .containerIconsPrimary {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+
 }
 
 
 .containerIconsPrimaryBox2{
     width: 100%;
     display: flex;
-}
+    align-items: center;
 
-.containerIcons .box {
-  margin-right: 20px;
 }
 
 .containerIconsPrimary p {
@@ -89,8 +92,7 @@
     line-height:  20.8px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    text-align: left;
 }
 
 .containerIconsImg{
@@ -98,6 +100,7 @@
     border-radius: 50%;
     background: var(--brand-yellow-dark, #C47F17);
     margin-right: 12px;
+
 }
 
 .light{
@@ -122,11 +125,10 @@
 
 .sectionTwo{
     margin-top: 100px;
-
   }
   
   .containerSectionCoffee{
-    width: 70%;
+    width: 80%;
     margin: auto;
   }
   

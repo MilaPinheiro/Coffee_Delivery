@@ -36,14 +36,14 @@
 
   
   .sectionCoffeeCards{
-    width: 100%;
+    width: 80%;
     max-width: 1250px;
-    margin: 0 auto;
+    margin: auto;
     margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 32px;
-    
+    gap: 15px;
+    padding:  0 0 25px;
   }

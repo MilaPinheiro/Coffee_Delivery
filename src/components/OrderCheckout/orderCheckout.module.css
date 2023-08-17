@@ -1,13 +1,9 @@
 .containerOrder {
     display: flex;
-    width: 62%;
+    width: 80%;
     margin: auto;
     margin-top: 54px;
     
-}
-
-.sectionTwo {
- margin-right: 32px;
 }
 
 .containerSectionCoffee{
@@ -28,7 +24,7 @@
   }
   
   .containerDelivery {
-    margin: auto;
+    width: 95%;
     padding: 40px;
     flex-direction: column;
     align-items: flex-start;
@@ -38,6 +34,7 @@
     border-radius: 6px;
     background: var(--base-card, #F3F2F2);
     margin-bottom: 12px;
+  
   }
 
   .mapBox{  
@@ -157,9 +154,10 @@
 
 .credCard {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
     gap: 12px;
+    width: 100%;
+    
 }
 
 .cards {
@@ -170,8 +168,9 @@
     background: var(--base-button, #E6E5E5);
     padding: 16px;
     font-size: 12px;
-    width: 100%;
     cursor: pointer;
+    width: 178px;
+    height: 51px;
 }
 
 .cards:hover{
@@ -182,8 +181,8 @@
 
 .cardsCenter {
     display: flex;
-    align-items: center;
     width: 100%;
     gap: 4px;
+   
 }
 

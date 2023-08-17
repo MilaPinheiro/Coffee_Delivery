@@ -5,26 +5,28 @@ header{
     left: 0;
     z-index: 5;
     background: var(--base-background, #ffffff);
+    width: 100%;
 }
 
 .headerContainer {
     width: 80%;
     margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 32px 160px;
+    padding: 32px 0px;
     margin-top: 0px;
-   
 }
 
 .imgLogo{
     width: 84.952px;
     height: 40px;
+
 }
 
 .location {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 
 }
@@ -45,6 +47,11 @@ header{
     padding: 8px;
     border-radius: 6px;
     background: var(--brand-yellow-light, #F1E9C9);
+    
 }
 
 
+.location img {
+    display: flex;
+    align-items: center;
+}
