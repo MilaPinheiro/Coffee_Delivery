@@ -8,23 +8,30 @@ function App() {
 
   const [selectedCoffees, setSelectedCoffees] = useState([]); 
 
-  
-  const selectCoffee = (coffeeId) => {
-    if (selectedCoffees.includes(coffeeId)) {
-      setSelectedCoffees(selectedCoffees.filter(id => id !== coffeeId));
-    } else {
-      setSelectedCoffees([...selectedCoffees, coffeeId]);
-    }
-    console.log(coffeeId)
-  };
 
+  const removeCoffee = (coffeeId) => {
+    const updatedSelectedCoffees = selectedCoffees.filter(id => id !== coffeeId)
+  
+    console.log(updatedSelectedCoffees)
+    setSelectedCoffees(updatedSelectedCoffees);
+}
+
+
+  const selectCoffee = (coffee) => {
+    setSelectedCoffees((prevSelectedCoffees) => [
+      ...prevSelectedCoffees,
+      coffee,
+    ]);
+
+    console.log(coffee)
+  };
 
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/"  element={<HomePage selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} />} />
-        <Route path="/checkout" element={<OrderCheckout selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} />} />
+        <Route path="/checkout" element={<OrderCheckout selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} removeCoffee={removeCoffee} />} />
       </Routes>
     </BrowserRouter>
   );

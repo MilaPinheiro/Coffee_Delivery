@@ -10,7 +10,7 @@ import IconOne from "../../assets/Icon1.svg";
 import IconTwo from "../../assets/Icon2.svg";
 import IconThree from "../../assets/Icon3.svg";
 
-export const HomePage = ({selectCoffee, selectedCoffees, incrementCoffe, decrementCoffe }) => {
+export const HomePage = ({selectCoffee, selectedCoffees}) => {
 
 
   return (
@@ -104,7 +104,7 @@ export const HomePage = ({selectCoffee, selectedCoffees, incrementCoffe, decreme
             price={coffee.price}
             selectedCoffees={selectedCoffees}
             onSelectCoffee={() => selectCoffee(coffee.id)} 
-          
+      
           />
         ))}
   

@@ -6,25 +6,32 @@ import IconPurple1 from "../../assets/iconpurple1.svg";
 import IconPurple2 from "../../assets/iconpurple2.svg";
 
 
-export function Coffee({id, name, description, tags, image, price, selectedCoffees,onSelectCoffee}) {
+export function Coffee({ id, name, description, tags, image, price, onSelectCoffee, setSelectedCoffees}) {
   
 
-  const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(0);
+   
 
+    const handleIncrement = () => {
+      setQuantity(prev => prev + 1);
+      
+    };
+   
 
-  const handleIncrement = () => {
-    setQuantity(prev => prev + 1);
-    
-  };
+    const handleDecrement = () => {
+      if (quantity > 0) {
+        setQuantity(prev => prev - 1)
+        
+      }
+    };
 
-
-  const handleDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(prev => prev - 1)
-     
-    }
-  };
-
+    const handleAddCoffee = () => {
+      onSelectCoffee({
+        id,
+        quantity
+      });
+    };
+  
 
     return ( 
 
@@ -51,7 +58,7 @@ export function Coffee({id, name, description, tags, image, price, selectedCoffe
                 <img src={IconPurple1} onClick={handleDecrement} />
                 {quantity}
                 <img src={IconPurple2}  onClick={handleIncrement}/></p>
-              <button className={styles.coffeCardButton} onClick={onSelectCoffee} >
+              <button className={styles.coffeCardButton} onClick={handleAddCoffee} >
                 <img src={IconButton} />
               </button>
             </div>

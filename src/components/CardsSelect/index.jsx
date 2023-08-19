@@ -6,10 +6,10 @@ import IconPurple1 from "../../assets/iconpurple1.svg";
 import IconPurple2 from "../../assets/iconpurple2.svg";
 import { Trash } from "@phosphor-icons/react";
 
-export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee, onConfirmOrder}) {
+export function CardsSelect({selectedCoffees, setSelectedCoffees, removeCoffee, onConfirmOrder}) {
 
     console.log(selectedCoffees)
-
+ 
     
     let amountSelectedPrice = 0;
    
@@ -23,12 +23,14 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee, onConf
         console.log(`"ID" +${coffeeId}`)
     });
 
+   
     console.log(amountSelectedPrice)
 
 
     const priceDelivery = amountSelectedPrice > 0 ? amountSelectedPrice + 3.50 : 0.00;
   
 
+ 
     return (
 
     <>
@@ -42,6 +44,8 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee, onConf
         {selectedCoffees.map(coffeeId => {
             const coffee = listCoffee.find(item => item.id === coffeeId);
             console.log(listCoffee);
+   
+
         return (
         <div key={coffee.id} className={styles.containerSelectBox} >
             <img src={coffee.image} />
@@ -51,12 +55,13 @@ export function CardsSelect({selectCoffee, selectedCoffees, removeCoffee, onConf
                     <p>R$ {coffee.price}</p>
                 </div>
                 <div className={styles.cardRemove} >
-                    <p className={styles.coffeeCardBox2P2}><img src={IconPurple1} />1 <img className={styles.box3} src={IconPurple2}/></p>
+                    <p className={styles.coffeeCardBox2P2}><img src={IconPurple1}/>1<img className={styles.box3} src={IconPurple2}/></p>
                     <span ><Trash size={32} className={styles.trash} onClick={() => removeCoffee(coffee.id)}/>REMOVER</span>
                 </div>
             </div>
         </div>
         );
+           
     })}
 
     <div className={styles.selectOrder}>
