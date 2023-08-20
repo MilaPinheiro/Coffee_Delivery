@@ -81,7 +81,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                 </div>
             </section>
         </section>
-        <CardsSelect selectedCoffees={selectedCoffees} setSelectedCoffees={setSelectedCoffees}  removeCoffee={removeCoffee}  onConfirmOrder={handleConfirmOrder} />
+        <CardsSelect selectedCoffees={selectedCoffees} setSelectedCoffees={setSelectedCoffees}  removeCoffee={removeCoffee}  onConfirmOrder={handleConfirmOrder}/>
 
     </section>
     )}
