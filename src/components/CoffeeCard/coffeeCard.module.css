@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.image {
+    margin-right: 20px;
+}
+
+.info{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.boxMoney{
+    display: flex;
+    justify-content: end;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxPrice {
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.quantity {
+    padding: 8px 4px;
+    border-radius: 6px;
+    background: var(--base-button, #E6E5E5);
+    margin-right: 8px;
+    display: flex;
+}
+
+.boxMargem {
+    margin-right: 5px;
+}
+
+.boxMargem1 {
+    margin-left: 5px;
+}
+
+.remove {
+    margin-right: 5px;
+  
+}
+
+.removeCoffe {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--base-button, #E6E5E5);
+    padding: 8px 8px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: var(--base-text, #574F4D);
+}

@@ -1,35 +1,29 @@
 import React, { useState } from 'react'; 
 import styles from "./cardsSelect.module.css";
-import { CoffeeCard } from '../CoffeeCard';
-import { listCoffee } from "../../data/listCoffe";
-import IconPurple1 from "../../assets/iconpurple1.svg";
-import IconPurple2 from "../../assets/iconpurple2.svg";
-import { Trash } from "@phosphor-icons/react";
+import { CoffeeCard } from '../CoffeeCard'
+import { formatCurrency } from '../util/currency';
 
-export function CardsSelect({selectedCoffees, setSelectedCoffees, removeCoffee, onConfirmOrder, handleDecrementCoffee, handleIncrementCoffee}) {
+export function CardsSelect({selectedCoffees,
+     removeCoffee, onConfirmOrder, updateCoffeeQuantity, onDecrement, onIncrement}) {
 
-    console.log(selectedCoffees)
+        console.log("CardsSelect - selectedCoffees:", selectedCoffees);
  
-    
-    let amountSelectedPrice = 0;
-   
-
-    selectedCoffees.forEach(coffeeId => {
-        const selectedCoffee = listCoffee.find(coffee => coffee.id === coffeeId);
-        if (selectedCoffee) {
-            amountSelectedPrice += selectedCoffee.price;
-        }
-
-        console.log(`"ID" +${coffeeId}`)
-    });
-
-   
-    console.log(amountSelectedPrice)
+    const totalItensPrice = selectedCoffees.reduce((acc, coffee) => {
+        return acc + coffee.price * coffee.quantity
+    }, 0)
 
 
-    const priceDelivery = amountSelectedPrice > 0 ? amountSelectedPrice + 3.50 : 0.00;
-  
-    
+    const formatItemPrice = formatCurrency(totalItensPrice)
+    console.log("CardsSelect - totalItensPrice:", totalItensPrice);
+
+    const deliveryPrice = selectedCoffees.length > 0  ? 3.5 : 0
+    console.log("CardsSelect - deliveryPrice:", deliveryPrice);
+
+
+    const  totalOrderPrice = totalItensPrice + deliveryPrice
+
+    const fomatTotalOrderPrice = formatCurrency(totalOrderPrice)
+    console.log("CardsSelect - totalOrderPrice:", totalOrderPrice);
 
  
     return (
@@ -38,68 +32,42 @@ export function CardsSelect({selectedCoffees, setSelectedCoffees, removeCoffee, 
     <section className={styles.sectionTwo}>
         <div className={styles.containerSectionCoffee}>
             <h2 className={styles.containerSectionCoffeeTitle}>
-            Cafés selecionados
+                 Cafés selecionados
             </h2>
         </div>
         <div className={styles.containerSelect}>
-        {selectedCoffees.map(coffeeId => {
-            const coffee = listCoffee.find(item => item.id === coffeeId);
-
-            console.log(listCoffee);
-
-            if (coffee) {
-                return (
-                  <CoffeeCard
-                    key={coffee.id}
-                    coffee={coffee}
-                    onIncrement={() => handleIncrementCoffee(coffee.id)}
-                    onDecrement={() => handleDecrementCoffee(coffee.id)}
-                    
-                    
-                  />
-                );
-              }
-              <div key={coffee.id} className={styles.containerSelectBox} >
-                <img src={coffee.image} />
-              <div className={styles.cardSelect} >
-                  <div className={styles.cardExpress} >
-                      <h3>{coffee.name}</h3>
-                      <p>R$ {coffee.price}</p>
-                  </div>
-                  <div className={styles.cardRemove} >
-                      <p className={styles.coffeeCardBox2P2}><img src={IconPurple1}/>1<img className={styles.box3} src={IconPurple2}/></p>
-                      <span ><Trash size={32} className={styles.trash} onClick={() => removeCoffee(coffee.id)}/>REMOVER</span>
-                  </div>
-              </div>
-              </div>
-    
-              
-            }) }
+            {selectedCoffees.map((coffee) => {
+            return (
+            <CoffeeCard
+             key={`${coffee.id}::${coffee.name}`}
+             coffee={coffee}
+             removeCoffee={removeCoffee}
+             updateCoffeeQuantity={updateCoffeeQuantity}
+          
+             />
+             )
+            })}
            
     
-        <div className={styles.selectOrder}>
-            <div className={styles.selectIntens}>
-                <p>Total de intens</p>
-                <span>{`R$ ${amountSelectedPrice.toFixed(2)}`}</span>
+            <div className={styles.selectOrder}>
+                <div className={styles.selectIntens}>
+                    <p>Total de intens</p>
+                    <span>{formatItemPrice}</span>
+                </div>
+                <div className={styles.selectIntens}>
+                    <p>Entrega</p>
+                    <span>{deliveryPrice}</span>
+                </div>
+                <div className={styles.selectIntensTwo}>
+                    <p>Total</p>
+                    <span>{fomatTotalOrderPrice}</span>
+                </div>
+                <button className={styles.buttonOrder} onClick={onConfirmOrder}>CONFIRMAR PEDIDO</button>
+                
             </div>
-            <div className={styles.selectIntens}>
-                <p>Entrega</p>
-                <span>R$3,50</span>
-            </div>
-            <div className={styles.selectIntensTwo}>
-                <p>Total</p>
-                <span>{`R$ ${priceDelivery.toFixed(2)}`}</span>
-            </div>
-            <button className={styles.buttonOrder} onClick={onConfirmOrder}>CONFIRMAR PEDIDO</button>
-            
         </div>
-
-    
-    </div>
-
-   
-  
     </section>
 </>
-    )
+)
+    
 }

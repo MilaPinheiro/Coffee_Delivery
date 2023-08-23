@@ -10,8 +10,8 @@ import IconOne from "../../assets/Icon1.svg";
 import IconTwo from "../../assets/Icon2.svg";
 import IconThree from "../../assets/Icon3.svg";
 
-export const HomePage = ({selectCoffee, selectedCoffees}) => {
-
+export const HomePage = ({selectCoffee, selectedCoffees, removeCoffee, onSelectCoffee}) => {
+  console.log("HomePage - selectedCoffees:", selectedCoffees);
 
   return (
     <>
@@ -97,14 +97,16 @@ export const HomePage = ({selectCoffee, selectedCoffees}) => {
         {listCoffee.map((coffee) => (
           <Coffee
             key={coffee.id}
+            coffee={coffee.id}
             name={coffee.name}
             description={coffee.description}
             tags={coffee.tags}
             image={coffee.image}
             price={coffee.price}
             selectedCoffees={selectedCoffees}
-            onSelectCoffee={() => selectCoffee(coffee.id)} 
-      
+            onSelectCoffee={selectCoffee}
+            removeCoffee={removeCoffee}
+            
           />
         ))}
   
