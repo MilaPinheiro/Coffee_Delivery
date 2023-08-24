@@ -104,7 +104,7 @@ export const HomePage = ({selectCoffee, selectedCoffees, removeCoffee, onSelectC
             image={coffee.image}
             price={coffee.price}
             selectedCoffees={selectedCoffees}
-            onSelectCoffee={selectCoffee}
+            onSelectCoffee={onSelectCoffee}
             removeCoffee={removeCoffee}
             
           />

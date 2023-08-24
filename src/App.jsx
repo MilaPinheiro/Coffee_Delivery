@@ -16,8 +16,10 @@ function App() {
       const coffeeAlreadySelected = prevSelectedCoffees.find((prevSelectedCoffee) => prevSelectedCoffee.id === coffee.id
     )
     if (coffeeAlreadySelected) {
-      coffeeAlreadySelected.quantity += coffee.quantity
-      return [...prevSelectedCoffees]
+      if (coffeeAlreadySelected.quantity > 0) {
+        coffeeAlreadySelected.quantity++;
+      }
+      return [...prevSelectedCoffees];
     }
 
     return [... prevSelectedCoffees, coffee]
@@ -49,10 +51,24 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header selectedCoffees={selectedCoffees}/>
       <Routes>
-        <Route path="/"  element={<HomePage selectCoffee={selectCoffee} selectedCoffees={selectedCoffees}  removeCoffee={handleRemoveCoffee} />} />
-        <Route path="/checkout" element={<OrderCheckout selectCoffee={selectCoffee} selectedCoffees={selectedCoffees} updateCoffeeQuantity={updateCoffeeQuantity} />} />
+        <Route path="/"  element={<HomePage 
+          selectCoffee={selectCoffee}
+          selectedCoffees={selectedCoffees}  
+         
+        />} 
+        />
+        <Route path="/checkout" 
+        element={
+        <OrderCheckout 
+          selectCoffee={selectCoffee} 
+          selectedCoffees={selectedCoffees} 
+          updateCoffeeQuantity={updateCoffeeQuantity} 
+          removeCoffee={handleRemoveCoffee} 
+         
+        />} 
+        />
       </Routes>
     </BrowserRouter>
   );

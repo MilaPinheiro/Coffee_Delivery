@@ -6,7 +6,7 @@ import styles from "./orderCheckout.module.css"
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "@phosphor-icons/react";
 
 
-export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOrder, removeCoffee, updateCoffeeQuantity}) { 
+export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOrder, removeCoffee, updateCoffeeQuantity, onSelectCoffee}) { 
 
     const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
 
@@ -81,7 +81,14 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                 </div>
             </section>
         </section>
-        <CardsSelect selectedCoffees={selectedCoffees} setSelectedCoffees={setSelectedCoffees}  removeCoffee={removeCoffee}  onConfirmOrder={handleConfirmOrder} updateCoffeeQuantity={updateCoffeeQuantity}/>
+        <CardsSelect 
+            selectedCoffees={selectedCoffees} 
+            setSelectedCoffees={setSelectedCoffees} 
+            removeCoffee={removeCoffee} 
+            onConfirmOrder={handleConfirmOrder}
+            updateCoffeeQuantity={updateCoffeeQuantity}
+           
+        />
 
     </section>
     )}

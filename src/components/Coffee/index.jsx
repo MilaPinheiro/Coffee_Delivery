@@ -36,6 +36,8 @@ export function Coffee({ id, coffee, name, description, tags, image, price, onSe
         price,
         quantity,
       });
+
+    
     };
   
 
@@ -64,7 +66,7 @@ export function Coffee({ id, coffee, name, description, tags, image, price, onSe
                 <img src={IconPurple1} onClick={handleDecrement} />
                 {quantity}
                 <img src={IconPurple2}  onClick={handleIncrement}/></p>
-              <button className={styles.coffeCardButton} onClick={() => handleAddCoffee(id)} >
+              <button className={styles.coffeCardButton}  onClick={() => handleAddCoffee(coffee)}>
                 <img src={IconButton} />
               </button>
             </div>

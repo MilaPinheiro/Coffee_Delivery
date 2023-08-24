@@ -6,7 +6,10 @@ import Location from "../../assets/Location.svg";
 
 
 
-export function Header() {
+export function Header({ selectedCoffees }) {
+
+  const selectedCoffeesTotal = selectedCoffees.length
+
 
     return (
       <>
@@ -20,8 +23,12 @@ export function Header() {
                 <img src={Location} />
                 Vinhedo, SP
               </p>
-              <Link to="/checkout">
+              <Link to="/checkout" className="styles.buttonNumber">
                 <img className={styles.imgLocation} src={IconHeader} />
+
+                <div className="styles.buttonCart">
+                  <span>{selectedCoffeesTotal}</span>
+                </div>
               </Link>
               </div>
           </div>

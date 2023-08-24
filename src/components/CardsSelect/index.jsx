@@ -4,7 +4,7 @@ import { CoffeeCard } from '../CoffeeCard'
 import { formatCurrency } from '../util/currency';
 
 export function CardsSelect({selectedCoffees,
-     removeCoffee, onConfirmOrder, updateCoffeeQuantity, onDecrement, onIncrement}) {
+     removeCoffee, onConfirmOrder, updateCoffeeQuantity, onDecrement, onIncrement,onSelectCoffee, selectCoffee}) {
 
         console.log("CardsSelect - selectedCoffees:", selectedCoffees);
  
@@ -42,8 +42,9 @@ export function CardsSelect({selectedCoffees,
              key={`${coffee.id}::${coffee.name}`}
              coffee={coffee}
              removeCoffee={removeCoffee}
+             selectedCoffees={selectedCoffees}
              updateCoffeeQuantity={updateCoffeeQuantity}
-          
+             onSelectCoffee={onSelectCoffee}
              />
              )
             })}
