@@ -12,6 +12,7 @@ import IconThree from "../../assets/Icon3.svg";
 
 export const HomePage = ({selectCoffee, selectedCoffees, removeCoffee, onSelectCoffee}) => {
   console.log("HomePage - selectedCoffees:", selectedCoffees);
+  console.log("onSelectCoffee", onSelectCoffee);
 
   return (
     <>
@@ -104,7 +105,7 @@ export const HomePage = ({selectCoffee, selectedCoffees, removeCoffee, onSelectC
             image={coffee.image}
             price={coffee.price}
             selectedCoffees={selectedCoffees}
-            onSelectCoffee={onSelectCoffee}
+            selectCoffee={selectCoffee}
             removeCoffee={removeCoffee}
             
           />

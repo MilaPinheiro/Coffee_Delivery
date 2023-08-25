@@ -6,7 +6,7 @@ import IconPurple1 from "../../assets/iconpurple1.svg";
 import IconPurple2 from "../../assets/iconpurple2.svg";
 
 
-export function Coffee({ id, coffee, name, description, tags, image, price, onSelectCoffee, setSelectedCoffees,removeCoffee}) {
+export function Coffee({ id, coffee, name, description, tags, image, price, selectCoffee, setSelectedCoffees,removeCoffee}) {
   
 
     const [quantity, setQuantity] = useState(0);
@@ -26,7 +26,7 @@ export function Coffee({ id, coffee, name, description, tags, image, price, onSe
     };
 
     const handleAddCoffee = () => {
-      onSelectCoffee({
+      selectCoffee({
         id,
         coffee,
         description,
@@ -37,7 +37,7 @@ export function Coffee({ id, coffee, name, description, tags, image, price, onSe
         quantity,
       });
 
-    
+      
     };
   
 

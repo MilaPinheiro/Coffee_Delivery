@@ -19,7 +19,7 @@ function App() {
       if (coffeeAlreadySelected.quantity > 0) {
         coffeeAlreadySelected.quantity++;
       }
-      return [...prevSelectedCoffees];
+      return [...prevSelectedCoffees, coffee];
     }
 
     return [... prevSelectedCoffees, coffee]
@@ -56,7 +56,7 @@ function App() {
         <Route path="/"  element={<HomePage 
           selectCoffee={selectCoffee}
           selectedCoffees={selectedCoffees}  
-         
+         onSelectCoffee={selectCoffee}
         />} 
         />
         <Route path="/checkout" 
