@@ -175,7 +175,7 @@
 
 .cards:hover{
   border-radius: 6px;
-  border: 2px solid var(--brand-purple, #8047F8);
+ 
   background: var(--brand-purple-light, #EBE5F9);
 }
 
@@ -186,3 +186,9 @@
    
 }
 
+.selected {
+  background-color: var(--brand-yellow-dark);
+  color: var(--base-background);
+  border: 2px solid var(--brand-purple, #8047F8);
+ 
+}

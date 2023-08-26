@@ -23,11 +23,11 @@ export function Header({ selectedCoffees }) {
                 <img src={Location} />
                 Vinhedo, SP
               </p>
-              <Link to="/checkout" className="styles.buttonNumber">
+              <Link to="/checkout">
                 <img className={styles.imgLocation} src={IconHeader} />
 
-                <div className="styles.buttonCart">
-                  <span>{selectedCoffeesTotal}</span>
+                <div className={`${styles.buttonCartCard} ${selectedCoffeesTotal === 0 ? styles.hideCart : ''}`}>
+                 <span>{selectedCoffeesTotal}</span>
                 </div>
               </Link>
               </div>

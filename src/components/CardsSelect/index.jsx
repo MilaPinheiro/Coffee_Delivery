@@ -4,10 +4,11 @@ import { CoffeeCard } from '../CoffeeCard'
 import { formatCurrency } from '../util/currency';
 
 export function CardsSelect({selectedCoffees,
-     removeCoffee, onConfirmOrder, updateCoffeeQuantity}) {
+     removeCoffee, onConfirmOrder, updateCoffeeQuantity }) {
 
         console.log("CardsSelect - selectedCoffees:", selectedCoffees);
- 
+        console.log("CardsSelect - removeCoffee",  removeCoffee);
+        
     const totalItensPrice = selectedCoffees.reduce((acc, coffee) => {
         return acc + coffee.price * coffee.quantity
     }, 0)

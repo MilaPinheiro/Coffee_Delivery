@@ -10,6 +10,7 @@ function App() {
 
   console.log("App - selectedCoffees:", selectedCoffees);
 
+
   const selectCoffee = (coffee) => {
     console.log("Selected coffee ID:", coffee.id);
     setSelectedCoffees((prevSelectedCoffees) => {
@@ -32,6 +33,7 @@ function App() {
     console.log("Removing coffee with ID:", coffeeId);
     const updatedSelectedCoffees = selectedCoffees.filter((coffee) => coffee.id !== coffeeId)
     setSelectedCoffees(updatedSelectedCoffees);
+    console.log("App - removeCoffee",  coffeeId);
 }
 
   const updateCoffeeQuantity = (coffeeId, quantity) => {
@@ -56,7 +58,8 @@ function App() {
         <Route path="/"  element={<HomePage 
           selectCoffee={selectCoffee}
           selectedCoffees={selectedCoffees}  
-         onSelectCoffee={selectCoffee}
+          onSelectCoffee={selectCoffee}
+          removeCoffee={handleRemoveCoffee}
         />} 
         />
         <Route path="/checkout" 
@@ -65,7 +68,7 @@ function App() {
           selectCoffee={selectCoffee} 
           selectedCoffees={selectedCoffees} 
           updateCoffeeQuantity={updateCoffeeQuantity} 
-          removeCoffee={handleRemoveCoffee} 
+          removeCoffee={handleRemoveCoffee}
          
         />} 
         />

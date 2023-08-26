@@ -7,25 +7,29 @@ import { Trash } from '@phosphor-icons/react';
 export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelectCoffee}) {
   const { id, name, image, price} = coffee
   const [quantity, setQuantity] = useState(coffee.quantity);
-
+  console.log("CoffeeCard - removeCoffee",  removeCoffee);
   console.log("CoffeeCard - coffee:", coffee);
     
   const handleIncrementCoffee = () => {
-    updateCoffeeQuantity(coffee.id, quantity) + 1;
-   
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateCoffeeQuantity(id, newQuantity);
   };
 
   const handleDecrementCoffee = () => {
-    if (coffee.quantity > 0) {
-      updateCoffeeQuantity(coffee.id, quantity -1 );
+    if (quantity > 0) {
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      updateCoffeeQuantity(id, newQuantity);
+    } else {
+      removeCoffee(coffee.id);
     }
-    else {
-      removeCoffee(coffee.id)
-   }
   };
 
   const handleRemoveCoffee = () => {
+    console.log("Removing coffee with ID:", coffee.id);
     removeCoffee(coffee.id)
+   
   };
   
   
@@ -48,7 +52,7 @@ export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelec
             <span>{quantity}</span>
             <img className={styles.boxMargem1} src={IconPurple2} onClick={handleIncrementCoffee} alt="Increment" />
           </div>
-          <div className={styles.removeCoffe} onClick={handleRemoveCoffee}>
+          <div className={styles.removeCoffe} onClick={() => handleRemoveCoffee(coffee.id)}>
             <Trash size={24} className={styles.remove}  />
             <span>REMOVER</span>
           </div>

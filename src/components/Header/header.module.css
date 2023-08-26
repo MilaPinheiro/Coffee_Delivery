@@ -55,3 +55,30 @@ header{
     display: flex;
     align-items: center;
 }
+
+.buttonCartCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+    right: 130px;
+    top: 30px;
+    border-radius: 50%;
+    background: var(--brand-yellow-dark, #C47F17);
+    width: 8px;
+    height: 8px;
+  
+
+    color: var(--base-background, #ffffff);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+  
+}
+
+.hideCart {
+  
+    display: none;
+}
