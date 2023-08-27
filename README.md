@@ -1,8 +1,34 @@
-# React + Vite
+<h1 align="center">Coffee Delivery</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+<br>
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- Html e Css
+- React
+- JavaScript
+- Git e Github
+- Figma
+
+## 💻 Projeto
+
+O projeto boldo é o desenvolvimento de um layout. Com a realziação do projeto, foi possível desenvolver maiores habilidades em HTML, CSS, JavaScript, Figma e Github.
+Além de aperceiçoar conhecimentos de resposividade e versionamento de código.
+
+<img src="" >
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [DESSE LINK](https://github.com/MilaPinheiro/coffee_Delivery)
+
+--- 
+## Feito com amor por:
+
+♥ Camila Pinheiro
