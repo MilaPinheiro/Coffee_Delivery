@@ -82,3 +82,20 @@ header{
   
     display: none;
 }
+
+
+@media (max-width: 700px) {
+    .headerContainer {
+        width: 90%;
+    }
+        
+    .location p {
+        display: none;
+    }
+
+    .buttonCartCard{
+        right: 12px;
+        top: 28px;
+    }
+
+}

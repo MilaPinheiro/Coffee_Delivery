@@ -65,6 +65,7 @@
 
 .sectionCoffeeCards {
     width: 100%;
+    
 }
 
 .containerIconsPrimary {
@@ -124,7 +125,7 @@
 }
 
 .sectionTwo{
-    margin-top: 100px;
+    margin-top: 20px;
   }
   
   .containerSectionCoffee{
@@ -142,3 +143,62 @@
     margin-bottom: 54px;
   }
   
+
+  @media (max-width: 700px) {
+
+    .containerSection {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .containerSection{
+        margin-top: 150px;
+    }
+
+    .sectionOnetitle{
+        padding-right: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .sectionOneContainer h1{
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .containerDivs{
+        width: 100%;
+    }
+
+    .containerDivs:nth-child(1){
+        flex-direction: column-reverse;
+    }
+
+    .sectionOneContainer{
+        width: 100%;
+        margin: auto;
+    }
+
+    .containerIconsPrimary{
+        flex-direction:column ;
+    }
+
+    .sectionTwo{
+        margin-top: 50px;
+    }
+
+    .containerCoffe {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .icons{
+        margin-top: 50px;
+    }
+
+    .containerSectionCoffee {
+      width: 90%;
+    }
+
+   
+  }

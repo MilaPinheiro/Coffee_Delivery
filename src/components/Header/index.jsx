@@ -18,7 +18,7 @@ export function Header({ selectedCoffees }) {
             <Link to="/">
               <img className={styles.imgLogo} src={Logo} />
             </Link>
-            <div className={styles.location}>
+            <div className={styles.location} >
               <p>
                 <img src={Location} />
                 Vinhedo, SP

@@ -98,16 +98,11 @@ export const HomePage = ({selectCoffee, selectedCoffees, removeCoffee, onSelectC
         {listCoffee.map((coffee) => (
           <Coffee
             key={coffee.id}
-            coffee={coffee.id}
-            name={coffee.name}
-            description={coffee.description}
-            tags={coffee.tags}
-            image={coffee.image}
-            price={coffee.price}
+            coffee={coffee}
             selectedCoffees={selectedCoffees}
             selectCoffee={selectCoffee}
             removeCoffee={removeCoffee}
-            
+          
           />
         ))}
   

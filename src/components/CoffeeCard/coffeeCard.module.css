@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 24px;
+   
 }
 
 .image {
@@ -64,4 +65,22 @@
     font-weight: 400;
     line-height: 19.2px;
     color: var(--base-text, #574F4D);
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 100%;
+       margin: auto;
+    }
+
+    .image {
+      width: 80px;
+    }
+
+    .info h3 {
+        width: 100%;
+        font-size: 15px;
+    }
+
 }

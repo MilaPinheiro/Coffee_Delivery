@@ -39,11 +39,10 @@ export const SuccessOrder = ({onConfirmOrder}) => {
                                     </div>
                             
                             </div>
-                        </div>
+                    </div>
                         
                         
                     </div>
-                        
                         <div className={styles.successImage}>
                             <img src={Ilustration} alt="" />
                         </div>

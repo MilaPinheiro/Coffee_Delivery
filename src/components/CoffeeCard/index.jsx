@@ -5,7 +5,7 @@ import IconPurple2 from '../../assets/iconpurple2.svg';
 import { Trash } from '@phosphor-icons/react';
 
 export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelectCoffee}) {
-  const { id, name, image, price} = coffee
+  const {id, name, image, price, tags} = coffee
   const [quantity, setQuantity] = useState(coffee.quantity);
   console.log("CoffeeCard - removeCoffee",  removeCoffee);
   console.log("CoffeeCard - coffee:", coffee);
@@ -17,7 +17,7 @@ export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelec
   };
 
   const handleDecrementCoffee = () => {
-    if (quantity > 0) {
+    if (quantity >= 0) {
       const newQuantity = quantity - 1;
       setQuantity(newQuantity);
       updateCoffeeQuantity(id, newQuantity);
@@ -34,7 +34,7 @@ export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelec
   
   
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <img src={image} alt={name} className={styles.image} />
       <div className={styles.info}>
         <h3>{name}</h3>
@@ -49,7 +49,7 @@ export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelec
         <div className={styles.boxPrice}>
           <div className={styles.quantity}>
             <img className={styles.boxMargem} src={IconPurple1} onClick={handleDecrementCoffee} alt="Decrement" />
-            <span>{quantity}</span>
+            <span>{coffee.quantity}</span>
             <img className={styles.boxMargem1} src={IconPurple2} onClick={handleIncrementCoffee} alt="Increment" />
           </div>
           <div className={styles.removeCoffe} onClick={() => handleRemoveCoffee(coffee.id)}>

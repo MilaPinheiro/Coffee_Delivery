@@ -109,3 +109,46 @@
 
 }
 
+@media (max-width: 700px) {
+    .boxSuccess{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .orderConfirmTitle{
+        width: 90%;
+        margin: auto;
+    }
+
+    .boxOne h1{
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .OrdeConfirmP {
+        width: 90%;
+        margin: auto;
+    }
+
+    .successImage{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .successImage img{
+        width: 100%;
+       margin-top: 50px;
+    }
+    
+    .containerDeliverySuccess {
+        border: 1px solid #C47F17;
+        width: 90%;
+        padding: 20px 20px 0; 
+        margin: auto;
+    }
+
+}
