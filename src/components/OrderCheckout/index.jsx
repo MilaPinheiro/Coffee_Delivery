@@ -6,7 +6,8 @@ import styles from "./orderCheckout.module.css"
 import { MapPinLine, CurrencyDollar, CreditCard, Bank, Money } from "@phosphor-icons/react";
 
 
-export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOrder, removeCoffee, updateCoffeeQuantity, onSelectCoffee}) { 
+export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOrder,
+    removeCoffee, updateCoffeeQuantity, onSelectCoffee}) { 
 
     const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
 
@@ -44,7 +45,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
 
     <>
     {isOrderConfirmed ? 
-         <SuccessOrder onConfirmOrder={onConfirmOrder} /> : (
+         <SuccessOrder onConfirmOrder={onConfirmOrder} selectedPaymentMethod={selectedPaymentMethod} addressData={addressData}/> : (
         <section className={styles.containerOrder}>
         <section className={styles.sectionTwo}>
             <div className={styles.containerSectionCoffee}>
@@ -62,6 +63,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                         <input type="text" 
                             className={styles.inputBox1}   
                             placeholder="CEP" 
+                            value={addressData.cep}
                             onChange={e => handleAddressInputChange('cep', e.target.value)}
                         />
 
@@ -69,6 +71,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                             type="text"  
                             className={styles.inputBox} 
                             placeholder="Rua"
+                            value={addressData.rua}
                             onChange={e => handleAddressInputChange('rua', e.target.value)}
                         />
                     </div>
@@ -84,6 +87,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                                 <input type="text" 
                                 className={styles.inputBox}  
                                 placeholder="Bairro"
+                                value={addressData.bairro}
                                 onChange={e => handleAddressInputChange('bairro', e.target.value)}
                                 />
                        </div>
@@ -93,6 +97,7 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                                 <input type="text" 
                                     className={styles.inputBox}  
                                     placeholder="Complemento" 
+                                    value={addressData.complemento}
                                     onChange={e => handleAddressInputChange('complemento', e.target.value)}
                                 />
                             </div>
@@ -100,11 +105,13 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                                 <input type="text"
                                     className={`${styles.inputBox} ${styles.city}`} 
                                     placeholder="Cidade"
+                                    value={addressData.cidade}
                                     onChange={e => handleAddressInputChange('cidade', e.target.value)}
                                   />
                                 <input type="text" 
                                 className={`${styles.inputBox} ${styles.inputUf}`}    
                                  placeholder="UF"
+                                 value={addressData.uf}
                                  onChange={e => handleAddressInputChange('uf', e.target.value)}
                                  />
                             </div>
@@ -122,16 +129,16 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
                 </div> 
                        
                 <div className={styles.credCard}>
-                        <div className={`${styles.cards} ${selectedPaymentMethod === 'credit-card' ? styles.selected : ''}`}
-                         onClick={() => setSelectedPaymentMethod('credit-card')}>
+                        <div className={`${styles.cards} ${selectedPaymentMethod === 'CARTÃO CRÉDITO' ? styles.selected : ''}`}
+                         onClick={() => setSelectedPaymentMethod('CARTÃO CRÉDITO')}>
                             <span className={styles.cardsCenter}><CreditCard  size={32} className={styles.colorTwo}  />CARTÃO CRÉDITO</span>
                         </div>
-                        <div className={`${styles.cards} ${selectedPaymentMethod === 'debit-card' ? styles.selected : ''}`}
-                         onClick={() => setSelectedPaymentMethod('debit-card')}>
+                        <div className={`${styles.cards} ${selectedPaymentMethod === 'CARTÃO DE DÉBITO' ? styles.selected : ''}`}
+                         onClick={() => setSelectedPaymentMethod('CARTÃO DE DÉBITO')}>
                             <span className={styles.cardsCenter}><Bank size={32} className={styles.colorTwo}  />CARTÃO DE DÉBITO</span>
                         </div>
-                        <div className={`${styles.cards} ${selectedPaymentMethod === 'cash' ? styles.selected : ''}`}
-                         onClick={() => setSelectedPaymentMethod('cash')}>
+                        <div className={`${styles.cards} ${selectedPaymentMethod === 'DINHEIRO' ? styles.selected : ''}`}
+                         onClick={() => setSelectedPaymentMethod('DINHEIRO')}>
                             <span className={styles.cardsCenter}><Money size={32} className={styles.colorTwo}  />DINHEIRO</span>
                         </div>
                 </div>
@@ -143,7 +150,8 @@ export function OrderCheckout({ setSelectedCoffees, selectedCoffees, onConfirmOr
             removeCoffee={removeCoffee} 
             onConfirmOrder={handleConfirmOrder}
             updateCoffeeQuantity={updateCoffeeQuantity}
-           
+            selectedPaymentMethod={selectedPaymentMethod}
+            addressData={addressData}
         />
 
     </section>
