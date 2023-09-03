@@ -6,7 +6,9 @@ import { Trash } from '@phosphor-icons/react';
 
 export function CoffeeCard({ coffee, removeCoffee, updateCoffeeQuantity, onSelectCoffee}) {
   const {id, name, image, price, tags} = coffee
+  
   const [quantity, setQuantity] = useState(coffee.quantity);
+
   console.log("CoffeeCard - removeCoffee",  removeCoffee);
   console.log("CoffeeCard - coffee:", coffee);
     

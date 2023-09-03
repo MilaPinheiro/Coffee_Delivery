@@ -1,12 +1,13 @@
 .sectionTwo {
     margin-right: 32px;
+
 }
 
 .containerSectionCoffee{
        width: 100%;
        margin: auto;
-  
 }
+
      
 .containerSectionCoffeeTitle{
        font-family: var(--title);
